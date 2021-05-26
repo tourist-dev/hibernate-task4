@@ -12,7 +12,7 @@ public class Student {
     private String name;
 
     @ManyToMany(targetEntity = Teacher.class, cascade = {CascadeType.ALL})
-    @JoinTable(name = "teacher", joinColumns = {@JoinColumn(name = "s_id")}, inverseJoinColumns = { @JoinColumn(name = "t_id") })
+    @JoinTable(name = "teacher_student", joinColumns = {@JoinColumn(name = "s_id")}, inverseJoinColumns = { @JoinColumn(name = "t_id") })
     private List<Teacher> teacherList;
 
     public int getId() {
